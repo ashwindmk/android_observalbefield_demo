@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.ashwin.android.observalefield.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mainViewModel.userField.name}"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/email_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mainViewModel.userField.email}"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/bool_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(mainViewModel.boolField)}"
+            android:layout_marginBottom="24dp" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="2dp"
+            android:foreground="@color/black"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/name_edittext"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/email_edittext"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/bool_edittext"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:hint="Boolean"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="UPDATE" />
+    </LinearLayout>
+</layout>
